@@ -22,7 +22,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-3  d-flex align-items-center">
                 <div class="row">
-                    <form action="../projeto_escola/controller/aluno.php" method="POST">
+                    <form action="../projeto_escola_inw/controller/aluno.php" method="POST">
                         <div>
                             <div class="mb-3">
                                 <label for="nomeAluno" class="form-label">Nome do Aluno</label>
