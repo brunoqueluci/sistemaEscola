@@ -18,37 +18,41 @@
             </div>
         </nav>
     </div>
-    <div class="conteiner">
-        <div class="d-flex justify-content-center px-md-5">
-            <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
-                <div class="row">
-                    <form action="../sistemaEscola/controller/aluno.php" method="POST">
-                        <div>
-                            <div class="mb-3">
-                                <label for="nomeAluno" class="form-label">Nome do Aluno</label>
-                                <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite nome do Aluno" aria-label="Campo para nome do Aluno">
+    <form>
+        <div class="conteiner">
+            <div class="d-flex justify-content-center my-auto px-md-5">
+                <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
+                    <div class="row">
+                        <form action="../sistemaEscola/controller/aluno.php" method="POST">
+                            <div>
+                                <div class="mb-3">
+                                    <label for="nomeAluno" class="form-label">Nome do Aluno</label>
+                                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite nome do Aluno" aria-label="Campo para nome do Aluno">
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <label for="Digite a matrícula do Aluno." class="form-label">Matricula</label>
-                                <input class="form-control" type="text" id="matricula" name="matricula" placeholder="Digite a Matrícula" aria-label="Campo para Matricula do Aluno">
+                            <div>
+                                <div class="mb-3">
+                                    <label for="Digite a matrícula do Aluno." class="form-label">Matricula</label>
+                                    <input class="form-control" type="text" id="matricula" name="matricula" placeholder="Digite a Matrícula" aria-label="Campo para Matricula do Aluno">
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <label for="Digite a data de Nascimento do aleno" class="form-label">Data de Nascimento</label>
-                                <input class="form-control" type="date" id="data_nasc" name="data_nasc" placeholder="Data de Nascimento" aria-label="Campo para Matricula do Aluno">
+                            <div>
+                                <div class="mb-3">
+                                    <label for="Digite a data de Nascimento do aleno" class="form-label">Data de Nascimento</label>
+                                    <input class="form-control" type="date" id="data_nasc" name="data_nasc" placeholder="Data de Nascimento" aria-label="Campo para Matricula do Aluno">
+                                    
+                                </div>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button class="btn btn-secondary" type="reset" value="Reset">Limpar</button>
-                    </form>
+                            <div class="mb-3">
+                                <button type="submit" class=" btn btn-primary" value="cadastrar">Cadastrar</button>
+                                <button type="reset" class=" btn btn-secondary" value="Reset">Limpar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
