@@ -14,5 +14,5 @@ function insert($dados){
     }
     else {
         echo 'Erro';
-    }
+    }    
 }
