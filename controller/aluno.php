@@ -17,9 +17,16 @@ function dados_aluno()
     return $dados_aluno;
 };
 
-function cadastrar(){
-    $dados = dados_aluno();
-    $id = insert($dados);
+function cadastrar()
+{
+    if(!empty($dados)){
+        $dados = dados_aluno();
+        $id = insert($dados);
+    } else{
+        //echo 'Existe campos Inválidos.';
+        require_once("../view/alerta_campos_null.php");
+        //echo '<div class="alert alert-primary" role="alert">Existe campos inválidos</div>';
+    }
 
     echo '</br>';
     echo '<a href="http://localhost/sistemaEscola/index.php"><button class="btn btn-success">Voltar</button></a>';
