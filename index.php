@@ -18,12 +18,11 @@
             </div>
         </nav>
     </div>
-    <form>
+    <form action="../sistemaEscola/controller/aluno.php" method="POST">
         <div class="conteiner">
             <div class="d-flex justify-content-center my-auto px-md-5">
                 <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
                     <div class="row">
-                        <form action="../sistemaEscola/controller/aluno.php" method="POST">
                             <div>
                                 <div class="mb-3">
                                     <label for="nomeAluno" class="form-label">Nome do Aluno</label>
@@ -44,10 +43,12 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class=" btn btn-primary" value="cadastrar">Cadastrar</button>
-                                <button type="reset" class=" btn btn-secondary" value="Reset">Limpar</button>
+                                <button type="submit" class="btn btn-primary" value="cadastrar">Cadastrar</button>
+                                <button type="reset" class="btn btn-secondary" value="Reset">Limpar</button>
+                                <a href="http://localhost/sistemaEscola/view/visualizaralunos.php">
+                                    <button class="btn btn-info mt-2">visualizar</button>
+                                </a>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
