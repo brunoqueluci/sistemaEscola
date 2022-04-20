@@ -19,8 +19,8 @@
         </nav>
     </div>
     <div class="conteiner">
-        <div class="d-flex justify-content-center">
-            <div class="col-3  d-flex align-items-center">
+        <div class="d-flex justify-content-center px-md-5">
+            <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
                 <div class="row">
                     <form action="../sistemaEscola/controller/aluno.php" method="POST">
                         <div>
@@ -42,6 +42,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button class="btn btn-secondary" type="reset" value="Reset">Limpar</button>
                     </form>
                 </div>
             </div>
