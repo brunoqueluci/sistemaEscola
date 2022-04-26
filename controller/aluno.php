@@ -2,7 +2,7 @@
 <?php
 include_once("../view/cabeçalho.php");
 include_once("../model/conexao.php");
-include_once("../model/cadastrar.php");
+include_once("../model/cadastrar_aluno.php");
 
 function dados_aluno()
 {
@@ -15,17 +15,18 @@ function dados_aluno()
     );
 
     return $dados_aluno;
-};
+}
 
 function cadastrar()
 {
+    $dados = dados_aluno();
+    
     if(!empty($dados)){
-        $dados = dados_aluno();
+        
         $id = insert($dados);
-    } else{
-        //echo 'Existe campos Inválidos.';
+    } 
+    else {
         require_once("../view/alerta_campos_null.php");
-        //echo '<div class="alert alert-primary" role="alert">Existe campos inválidos</div>';
     }
 
     echo '</br>';
@@ -34,8 +35,8 @@ function cadastrar()
 
 cadastrar();
 
-function calcula_idade($data){
-
+function calcula_idade($data)
+{
     $data_atual = date("Y-m-d");
     $lista_atual = explode('-', $data_atual);
     $lista_dt_nasc = explode('-', $data);
