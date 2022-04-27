@@ -1,8 +1,7 @@
 
 <?php
 include_once("../view/cabeçalho.php");
-//include_once("../model/conexao.php");
-include_once("../model/cadastrar_professor.php");
+include_once("../model/professor/cadastrar_professor.php");
 
 /**
  * Método para coleta de dados para array
@@ -28,8 +27,7 @@ function cadastrar()
     $dados = dados_professor();
     if(!empty($dados)){
         $id = insert($dados);
-    }
-    else {
+    } else {
         require_once("../view/alerta_campos_null.php");
     }
 
