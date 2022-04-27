@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index | Portal Escolar</title>
+    <title>Cadastro Aluno | Portal Escolar</title>
 </head>
 <body>
     <div class="">
@@ -23,6 +23,9 @@
             <div class="d-flex justify-content-center my-auto px-md-5">
                 <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
                     <div class="row">
+                        <div>
+                            <h1>Cadastro Aluno</h1>
+                        </div>
                             <div>
                                 <div class="mb-3">
                                     <label for="nomeAluno" class="form-label">Nome do Aluno</label>
@@ -31,8 +34,14 @@
                             </div>
                             <div>
                                 <div class="mb-3">
-                                    <label for="Digite a matrícula do Aluno." class="form-label">Matricula</label>
-                                    <input class="form-control" type="text" id="matricula" name="matricula" placeholder="Digite a Matrícula" aria-label="Campo para Matricula do Aluno">
+                                    <label for="Digite a matrícula do Aluno." class="form-label">Nome Pai</label>
+                                    <input class="form-control" type="text" id="nome_pai" name="nome_pai" placeholder="Digite Nome Pai" aria-label="Campo para Nome do Pai">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3">
+                                    <label for="Digite a matrícula do Aluno." class="form-label">Nome Mãe</label>
+                                    <input class="form-control" type="text" id="nome_mae" name="nome_mae" placeholder="Digite Nome Mãe" aria-label="Campo para Nome do Mãe">
                                 </div>
                             </div>
                             <div>
@@ -42,12 +51,27 @@
                                     
                                 </div>
                             </div>
+                            <div>
+                                <div class="form-group">
+                                    <label for="Série do Aluno">Selecione a Série</label>
+                                    <select class="form-control" id="serie_aluno" name="serie_aluno">
+                                        <option value="1">5° Ano Fund</option>
+                                        <option value="2">6° Ano Fund</option>
+                                        <option value="3">7° Ano Fund</option>
+                                        <option value="4">8° Ano Fund</option>
+                                        <option value="5">9° Ano Fund</option>
+                                        <option value="6">1° Ano Médio</option>
+                                        <option value="7">2° Ano Médio</option>
+                                        <option value="8">3° Ano Médio</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" value="cadastrar">Cadastrar</button>
                                 <button type="reset" class="btn btn-secondary" value="Reset">Limpar</button>
-                                <a href="http://localhost/sistemaEscola/view/visualizaralunos.php">
+                                <!--<a href="http://localhost/sistemaEscola/view/visualizaralunos.php">
                                     <button class="btn btn-info mt-2">visualizar</button>
-                                </a>
+                                </a> -->
                             </div>
                     </div>
                 </div>
