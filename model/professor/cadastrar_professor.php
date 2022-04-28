@@ -16,5 +16,3 @@ function insert($dados)
         //echo 'Erro no SQL';  
     }
 }
-
- 
