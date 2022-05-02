@@ -1,6 +1,7 @@
 <?php
-
-    function calcula_idade($data)
+class CalculaIdade
+{
+    public function calcula_idade($data)
     {
         $data_atual = date("Y-m-d");
         $lista_atual = explode('-', $data_atual);
@@ -21,6 +22,6 @@
         } elseif ($dia_atual < $dia_nasc){
             $idade --;
         }
-
         return $idade;
     }
+}
