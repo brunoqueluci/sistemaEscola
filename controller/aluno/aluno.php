@@ -1,5 +1,6 @@
 <?php
-include_once("../controller/calcula_idade.php");
+include_once("../controller/Calcula_Idade.php");
+include_once("../model/aluno/Inserir_Aluno.php");
 
 /* 
     Controller para cadastro de alunos;
@@ -8,7 +9,7 @@ class Aluno
 {
     public function dados_aluno()
     {
-        $calIdade = new CalculaIdade;
+        $calIdade = new CalcularIdade;
         $dados_aluno = array
         (
             'nome' => $_POST['nome'],
@@ -21,20 +22,6 @@ class Aluno
         );  
         return $dados_aluno;
     }
-
-    public function cadastrar()
-    {
-        $dados = $this->dados_aluno();
-        $conecta = new inserirAluno;
-        $conecta->insert($dados);
-            if(!empty($dados)){
-                $id = insert($dados);
-            } else {
-                require_once("../view/alerta_campos_null.php");
-            }
-        echo '</br>';
-        echo '<a href="http://localhost/sistemaEscola/cadastroaluno.php"><button class="btn btn-success">Voltar</button></a>';
-    }
     
     public function calcula_matricula($a)
     {
@@ -45,4 +32,19 @@ class Aluno
         $matricula = date('Y') . $mes_nasc . $dia_nasc . rand(10,99);
         return $matricula;
     }
+
+    public function cadastrar()
+    {
+        $dados = $this->dados_aluno();
+        $conecta = new InserirAluno;
+        $conecta->insert($dados);
+            if(empty($dados)):
+               // $id = insert($dados);
+               require_once("../view/alerta_campos_null.php");
+            else:
+                echo "Deu certo2";
+            endif;
+        echo '</br>';
+        echo '<a href="http://localhost/sistemaEscola/cadastroaluno.php"><button class="btn btn-success">Voltar</button></a>';
+    }  
 }

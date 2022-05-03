@@ -18,7 +18,7 @@
             </div>
         </nav>
     </div>
-    <form action="../sistemaEscola/controller/professor.php" method="POST">
+    <form action="../sistemaEscola/controller/controller_professor.php" method="POST">
         <div class="conteiner">
             <div class="d-flex justify-content-center my-auto px-md-5">
                 <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">

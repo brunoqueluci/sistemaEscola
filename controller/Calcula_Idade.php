@@ -1,5 +1,5 @@
 <?php
-class CalculaIdade
+class CalcularIdade
 {
     public function calcula_idade($data)
     {
@@ -17,11 +17,11 @@ class CalculaIdade
 
         $idade = $ano_atual - $ano_nasc;
         
-        if ($mes_atual < $mes_nasc){
+        if ($mes_atual < $mes_nasc):
             $idade --;
-        } elseif ($dia_atual < $dia_nasc){
+        elseif ($dia_atual < $dia_nasc):
             $idade --;
-        }
+        endif;
         return $idade;
     }
 }
