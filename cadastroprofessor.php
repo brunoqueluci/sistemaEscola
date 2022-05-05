@@ -32,12 +32,7 @@
                                     <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do Professor" aria-label="Campo para nome do Professor">
                                 </div>
                             </div>
-                            <div>
-                                <div class="mb-3">
-                                    <label for="Digite a matrícula do Professor." class="form-label">Matricula</label>
-                                    <input class="form-control" type="text" id="matricula" name="matricula" placeholder="Digite a Matrícula" aria-label="Campo para Matricula do Professor">
-                                </div>
-                            </div>
+                            
                             <div>
                                 <div class="mb-3">
                                     <label for="Digite a Disciplina Lecionada" class="form-label">Disciplina</label>

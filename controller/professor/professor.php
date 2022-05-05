@@ -1,7 +1,7 @@
 
 <?php
 include_once("../view/cabeçalho.php");
-include_once("../model/professor/controller_professor.php");
+include_once("../model/professor/inserir_professor.php");
 
 /**
  * Método para coleta de dados para array
@@ -13,7 +13,7 @@ class Professor
         $dados_professor = array 
         (
             'nome' => $_POST['nome'],
-            'matricula' => $_POST['matricula'],
+            'matricula' => $this->matriculaProfessor(),
             'disciplina' => $_POST['disciplina'],
             'formacao' => $_POST['formacao']
         );
@@ -37,4 +37,11 @@ class Professor
         echo '</br>';
         echo '<a href="http://localhost/sistemaEscola/cadastroprofessor.php"><button class="btn btn-success">Voltar</button></a>';
     }
+    public function matriculaProfessor()
+    {
+        //$matricula = $m;
+        $matricula = date('Y').rand(10,99);
+        return $matricula;   
+    }
 }
+
