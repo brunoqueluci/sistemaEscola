@@ -7,16 +7,16 @@ class InserirDisciplina
     {
         $conectarbd = new Conecta;
         $conn = $conectarbd->conectar();
-        $query_cad = "INSERT INTO disciplina (nome, data_cadastro) VALUES ('$dados[nome]', current_date())";
+        $query_cad = "INSERT INTO disciplina (nome_disciplina, data_cadastro) VALUES ('$dados[nome]', current_date())";
         $querysql = mysqli_query($conn, $query_cad);
 
-        if($querysql):
+        /* if($querysql == true):
             //echo 'Deu certo <br>';
-            echo "Professor cadastrado foi: " . $dados['nome'], " sua disciplina é:  " . $dados['disciplina'];
+            echo "Disciplina cadastrada foi: " . $dados['nome'];
             require_once("../view/alerta_cad_sucesso.php");
         else:
             require_once("../view/alerta_campos_null.php");
             //echo 'Erro no SQL';  
-        endif;
+        endif; */
     }
 }

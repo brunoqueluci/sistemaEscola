@@ -28,7 +28,7 @@
                         </div>
                         <div>
                             <div class="mb-3">
-                                <label for="nomeAluno" class="form-label">Nome da Disciplina</label>
+                                <label for="nomeDisciplina" class="form-label">Nome da Disciplina</label>
                                 <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite nome da Disciplina" aria-label="Campo para nome da disciplina">
                             </div>
                         </div>
