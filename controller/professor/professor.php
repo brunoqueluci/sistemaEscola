@@ -26,22 +26,22 @@ class Professor
     public function cadastrar()
     {
         $dados = $this->dados_professor();
-        $conecta = new Inserirprofessor;
-        $conecta->insert($dados);
-        if(empty($dados)):
-            // $id = insert($dados);
+        
+        if(empty($_POST['nome'] || $_POST['disciplina'] || $_POST['formacao'])):
             require_once("../view/alerta_campos_null.php");
-         else:
-             echo "Deu certo2";
-         endif;
+        else:
+            $conecta = new Inserirprofessor;
+            $conecta->insert($dados);
+            echo "Professor cadastrado foi: " . $dados['nome'], " e sua matricula " . $dados['matricula'], " sua disciplina é:  " . $dados['disciplina'];
+            require_once("../view/alerta_cad_sucesso.php");
+        endif;
         echo '</br>';
         echo '<a href="http://localhost/sistemaEscola/cadastroprofessor.php"><button class="btn btn-success">Voltar</button></a>';
     }
+
     public function matriculaProfessor()
     {
-        //$matricula = $m;
         $matricula = date('Y').rand(10,99);
         return $matricula;   
     }
 }
-
