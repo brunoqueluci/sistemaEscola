@@ -2,7 +2,7 @@
 -- Servidor:                     127.0.0.1
 -- Versão do servidor:           5.7.36 - MySQL Community Server (GPL)
 -- OS do Servidor:               Win64
--- HeidiSQL Versão:              12.0.0.6468
+-- HeidiSQL Versão:              12.0.0.6504
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -32,22 +32,29 @@ CREATE TABLE IF NOT EXISTS `aluno` (
   `data_matricula` date DEFAULT NULL,
   PRIMARY KEY (`matricula`,`id`) USING BTREE,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela escola.aluno: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela escola.aluno: ~4 rows (aproximadamente)
 INSERT INTO `aluno` (`id`, `nome`, `matricula`, `nome_pai`, `nome_mae`, `data_nasc`, `serie_aluno`, `idade`, `data_matricula`) VALUES
-	(2, 'CAIXA', 2022032973, 'Pai', 'Vania Teixeira', '2022-03-29', 1, -1, '2022-04-28'),
-	(3, 'CAIXA', 2022042666, 'Pai', 'Mae', '2022-04-26', 7, 0, '2022-04-28'),
-	(1, 'bruno robero queluci fernandes', 2022042790, 'Jorge Robert', 'Vania Teixeira', '2022-04-27', 1, 0, '2022-04-28');
+	(3, 'Mario', 2022010796, 'Jose', 'Maria', '1975-01-07', 5, 46, '2022-05-03'),
+	(4, 'CAIXA', 2022050171, 'Pai', 'Mae', '1975-05-01', 1, 47, '2022-05-03'),
+	(1, 'CAIXA', 2022121813, 'Pai', 'Mae', '1987-12-18', 8, 34, '2022-05-03'),
+	(2, 'CAIXA', 2022121855, 'Pai', 'Mae', '1987-12-18', 8, 34, '2022-05-03');
 
 -- Copiando estrutura para tabela escola.disciplina
 CREATE TABLE IF NOT EXISTS `disciplina` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'campos para guardar o ID da disciplina.',
   `nome_disciplina` varchar(100) NOT NULL COMMENT 'Campo para guardar o nome da disciplina.',
+  `data_cadastro` date NOT NULL COMMENT 'Campo para data de cadastro.',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela para cadastro das disciplinas.';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Tabela para cadastro das disciplinas.';
 
--- Copiando dados para a tabela escola.disciplina: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela escola.disciplina: ~4 rows (aproximadamente)
+INSERT INTO `disciplina` (`id`, `nome_disciplina`, `data_cadastro`) VALUES
+	(1, 'CAIXA', '2022-05-13'),
+	(2, 'teste hoje', '2022-05-13'),
+	(3, 'bruno robero queluci fernandes', '2022-05-13'),
+	(4, 'CAIXA', '2022-05-13');
 
 -- Copiando estrutura para tabela escola.professor
 CREATE TABLE IF NOT EXISTS `professor` (
@@ -55,31 +62,17 @@ CREATE TABLE IF NOT EXISTS `professor` (
   `nome` varchar(50) NOT NULL,
   `matricula` int(11) NOT NULL,
   `disciplina` varchar(20) NOT NULL,
-  `formacao` varchar(25) NOT NULL,
+  `formacao` varchar(25) CHARACTER SET latin1 NOT NULL,
   `data_cadastro` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela escola.professor: 16 rows
-/*!40000 ALTER TABLE `professor` DISABLE KEYS */;
+-- Copiando dados para a tabela escola.professor: ~4 rows (aproximadamente)
 INSERT INTO `professor` (`id`, `nome`, `matricula`, `disciplina`, `formacao`, `data_cadastro`) VALUES
-	(1, 'abc', 123, 'acb', 'zxc', NULL),
-	(2, 'abc', 123, 'acb', 'zxc', NULL),
-	(3, 'abc', 123, 'acb', 'zxc', NULL),
-	(4, 'CAIXA', 987654, 'fisica', 'fisica', NULL),
-	(5, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-26'),
-	(6, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-26'),
-	(7, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(8, 'CAIXA', 987654, 'fisica', '', '2022-04-27'),
-	(9, 'teste hoje', 987654, '', '', '2022-04-27'),
-	(10, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(11, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(12, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(13, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(14, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(15, 'teste hoje', 987654, 'fisica', 'fisica', '2022-04-27'),
-	(16, 'CAIXA', 987654, 'fisica', 'fisica', '2022-04-27');
-/*!40000 ALTER TABLE `professor` ENABLE KEYS */;
+	(1, 'Gilberto', 202247, 'FÃ­sica', 'FÃ­sica', '2022-05-13'),
+	(2, 'CAIXA', 202219, 'FÃ­sica', 'FÃ­sica', '2022-05-13'),
+	(3, 'Antonia', 202244, 'FÃ­sica', 'FÃ­sica', '2022-05-13'),
+	(4, 'CAIXA', 202286, 'FÃ­sica', 'FÃ­sica', '2022-05-13');
 
 -- Copiando estrutura para tabela escola.turma
 CREATE TABLE IF NOT EXISTS `turma` (

@@ -18,7 +18,7 @@
             </div>
         </nav>
     </div>
-    <form action="../sistemaEscola/controller/professor.php" method="POST">
+    <form action="../sistemaEscola/controller/controller_professor.php" method="POST">
         <div class="conteiner">
             <div class="d-flex justify-content-center my-auto px-md-5">
                 <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
@@ -32,12 +32,7 @@
                                     <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do Professor" aria-label="Campo para nome do Professor">
                                 </div>
                             </div>
-                            <div>
-                                <div class="mb-3">
-                                    <label for="Digite a matrícula do Professor." class="form-label">Matricula</label>
-                                    <input class="form-control" type="text" id="matricula" name="matricula" placeholder="Digite a Matrícula" aria-label="Campo para Matricula do Professor">
-                                </div>
-                            </div>
+                            
                             <div>
                                 <div class="mb-3">
                                     <label for="Digite a Disciplina Lecionada" class="form-label">Disciplina</label>

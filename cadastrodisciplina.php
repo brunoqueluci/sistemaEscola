@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Cadastro Disciplina | Portal Escolar</title>
+=======
+    <title>Cadastro Aluno | Portal Escolar</title>
+>>>>>>> e8ed6d3b23bce6a43ae5763f414b1433016c8748
 </head>
 <body>
     <div class="">
@@ -18,7 +22,11 @@
             </div>
         </nav>
     </div>
+<<<<<<< HEAD
     <form action="../sistemaEscola/controller/aluno.php" method="POST">
+=======
+    <form action="../sistemaEscola/controller/controller_disciplina.php" method="POST">
+>>>>>>> e8ed6d3b23bce6a43ae5763f414b1433016c8748
         <div class="conteiner">
             <div class="d-flex justify-content-center my-auto px-md-5">
                 <div class="col-3 d-flex px-md-5 py-md-2 align-items-center">
@@ -26,6 +34,7 @@
                         <div>
                             <h1>Cadastro Disciplina</h1>
                         </div>
+<<<<<<< HEAD
                             <div>
                                 <div class="mb-3">
                                     <label for="nomeAluno" class="form-label">Nome da Disciplina</label>
@@ -73,6 +82,21 @@
                                     <button class="btn btn-info mt-2">visualizar</button>
                                 </a> -->
                             </div>
+=======
+                        <div>
+                            <div class="mb-3">
+                                <label for="nomeDisciplina" class="form-label">Nome da Disciplina</label>
+                                <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite nome da Disciplina" aria-label="Campo para nome da disciplina">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary" value="cadastrar">Cadastrar</button>
+                            <button type="reset" class="btn btn-secondary" value="Reset">Limpar</button>
+                                <!--<a href="http://localhost/sistemaEscola/view/visualizaralunos.php">
+                                    <button class="btn btn-info mt-2">visualizar</button>
+                                </a> -->
+                        </div>
+>>>>>>> e8ed6d3b23bce6a43ae5763f414b1433016c8748
                     </div>
                 </div>
             </div>
